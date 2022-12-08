@@ -27,11 +27,16 @@ public class IgaguriController : MonoBehaviour
     }
 
     /// <summary>
-    /// イガグリ衝突時に動きを停止する
+    /// イガグリ衝突時の処理
     /// </summary>
     /// <param name="collision"></param>
     private void OnCollisionEnter(Collision collision)
     {
+        // イガグリの動きを停止する
         GetComponent<Rigidbody>().isKinematic = true;
+
+        // イガグリのパーティカルエフェクト開始
+        GetComponent<ParticleSystem>().Play();
+
     }
 }
