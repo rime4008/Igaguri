@@ -25,4 +25,13 @@ public class IgaguriController : MonoBehaviour
     {
         GetComponent<Rigidbody>().AddForce(dir);
     }
+
+    /// <summary>
+    /// ƒCƒKƒOƒŠÕ“Ë‚É“®‚«‚ğ’â~‚·‚é
+    /// </summary>
+    /// <param name="collision"></param>
+    private void OnCollisionEnter(Collision collision)
+    {
+        GetComponent<Rigidbody>().isKinematic = true;
+    }
 }
